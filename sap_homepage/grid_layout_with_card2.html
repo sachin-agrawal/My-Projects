@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>grid_layout</title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+</head>
+
+<style type="text/css">
+
+body {
+	width: 80%;
+	margin: auto;
+}
+
+
+.header {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-family: sans-serif;
+	padding: 20px;
+	text-align: center;
+	font-size: 30px;
+	color: white;
+	background: #36486b;
+}	
+
+.grid-container {
+	display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+	grid-auto-rows: 150px;
+	grid-gap: 20px;
+	background: #36486b;
+	padding: 20px;
+}
+
+.grid-container > div{
+    display: flex;
+  	text-align: center;
+	padding: 20px;
+	color: #36486b;
+	font-family: sans-serif;
+	font-size: 25px;
+	background: aliceblue;
+}
+
+/*
+.grid-container > div:nth-child(odd){
+	color: #36486b;
+	background: #f2f2f2;
+}
+*/
+
+.grid-container>div>p{
+	margin: auto;
+}
+
+.grid-container>div>p>a{
+    display: list-item;          /* This has to be "list-item"                                               */
+    list-style-type: disc;       /* See https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-type     */
+    list-style-position: inside;
+	font-family: sans-serif;
+	color: #36486b;
+	font-size: 16px;
+	padding: 0;
+	text-align: left;
+	margin: 0; 
+}
+
+.grid-container>div>p:nth-child(2){
+	display:none;
+}
+
+.grid-container>div:hover {
+	cursor:auto;
+	background: lightgreen;
+}
+
+.grid-container>.hoverable:hover p:nth-child(2){
+	display:block;
+}
+
+.grid-container>.hoverable:hover p:nth-child(1){
+	display:none;
+}
+
+
+</style>
+
+<body>
+	<div class="header">
+		<img src="\\dewdfcv102.wdf.global.corp.sap\TSHome$\C5275755\Desktop\SAP_2011_logo.svg" alt="SAP Logo" style="vertical-align:middle;width:64px;border:0;">  
+		TOOLS HOMEPAGE
+	</div>
+
+
+	<div class="grid-container">
+ 		<div class="hoverable">
+ 			<p><i class="fas fa-clipboard-list"></i><br></br>PQA</p>
+ 			<p>
+ 				<a href="https://pqahec.hana.ondemand.com/HECQA/" target="_blank">PQA Production</a><br>
+ 				<a href="https://testqaqashec.int.hana.ondemand.com/HECQA/" target="_blank">PQA Quality/Test</a><br>
+ 			</p>
+ 		</div>
+		<div class="hoverable">
+			<p><i class="far fa-edit"></i><br></br>DED</p>
+ 			<p>
+ 				<a href="https://statushec.hana.ondemand.com/ded/index.jsp" target="_blank">DED Production</a><br>
+ 				<a href="https://teststatusqashec.int.hana.ondemand.com/ded/index.jsp" target="_blank">DED Quality</a><br>
+ 			</p>
+
+		</div>
+		<div class="hoverable">
+			<p><i class="fas fa-clipboard-check"></i><br></br>SPC</p>
+ 			<p>
+ 				<a href="https://spc.ondemand.com" target="_blank">SPC Production</a><br>
+ 				<a href="https://vns.wdf.sap.corp/" target="_blank">SPC Quality</a><br>
+ 				<a href="https://testqaqashec.int.hana.ondemand.com/HECQA/" target="_blank">SPC Development</a><br>
+ 			</p>
+
+		</div>  
+		<div onClick="window.open('https://spc.ondemand.com/sap/public/ap/ui/repository/SAP_UI/HTMLOBERON5/client.html?app.component=/SAP_UI_CT/Main/root.uiccwoc&rootWindow=X&redirectUrl=/sap/public/byd/runtime#n=eyJpblBvcnQiOiIiLCJ0YXJnZXQiOiIvQTFTX1NQQy9TeXN0ZW1BbmRUZW5hbnQvTmV3QkxEU3lzdGVtL05ld0JsZFN5c3RlbVdjdmlldy5XQ1ZJRVcudWl3b2N2aWV3IiwicGFyYW1zIjp7fSwibGlzdHMiOnt9LCJ3Y0NvbnRleHQiOnsid29jSWQiOiIvQTFTX1NQQy9Xb3JrQ2VudGVyL0Nsb3VkTGFuZHNjYXBlX1dDRi5XQ0YudWl3b2MiLCJ2aWV3SWQiOiIvQTFTX1NQQy9TeXN0ZW1BbmRUZW5hbnQvTmV3QkxEU3lzdGVtL05ld0JsZFN5c3RlbVdjdmlldy5XQ1ZJRVcudWl3b2N2aWV3IiwiaXNPdnAiOmZhbHNlLCJpc05hdk5vZGUiOnRydWUsIm5hdk5vZGVUZXh0IjoiQ2xvdWQlMjBMYW5kc2NhcGUlMjAtJTIwU3lzdGVtcyJ9fQ%3D%3D','_blank')"><p><i class="fas fa-cloud"></i><br></br>CLD</p></div>
+		<div onClick="window.open('https://spc40-emea.byd.sap.corp/sap/bc/webdynpro/a1sspc/cam_wd_central','_blank')"><p><i class="fas fa-cloud"></i> <i class="fas fa-user-lock"></i><br></br>CAM</p></div>
+		<div onClick="window.open('https://cmp.wdf.sap.corp/passvault(bD1lbiZjPTAwMQ==)/default.do','_blank')"><p><i class="fas fa-lock"></i> <i class="fas fa-key"></i><br></br>PASSVAULT</p></div>
+		<div onClick="window.open('https://access.sap.com','_blank')"><p><i class="fas fa-desktop"></i><br></br>WTS</p></div>
+		<div onClick="window.open('https://saphec.citrix-access.global.corp.sap/vpn/index.html','_blank')"><p><i class="fas fa-chalkboard-teacher"></i><br></br>HEC Desktop</p></div>
+		<div onClick="window.open('https://tic.wdf.sap.corp/','_blank')"><p><i class="fas fa-cogs"></i><br></br>TIC</p></div>
+
+		<div onClick="window.open('https://wiki.wdf.sap.corp/wiki/display/HECOPS/Home','_blank')"><p><i class="fab fa-wikipedia-w"></i><br></br>MCD WIKI</p></div>
+		<div onClick="window.open('https://vhmcdbfadb.mcd.rot.hec.sap.biz:4304/PRDPD/PD_Tracker/webapp/index.html','_blank')"><p><i class="fas fa-project-diagram"></i><br></br>PD Tracker</p></div>
+		<div onClick="window.open('https://support.wdf.sap.corp/sap(bD1lbiZjPTAwMSZkPW1pbiZpPTE=)/crm_logon/default.htm?saprole=ZCSSNEXTPROC','_blank')"><p><i class="fas fa-ticket-alt"></i><br></br>BCP Incident</p></div>
+		<div onClick="window.open('https://documents.wdf.sap.corp/share/page/site/HECOPS/documentlibrary#filter=path%7C%2F02_Productive%2FMCD%2520Project%2520Delivery%2520and%2520Operations&page=1','_blank')"><p><i class="fab fa-creative-commons-share" style="font-size:30px;"></i><br></br>Document Share</p></div>
+		<div onClick="window.open('https://i7p.wdf.sap.corp/sap(bD1lbiZjPTAwMQ==)/bc/bsp/sap/b0rm_resp/start_sap.htm?ui=navigate_to_intro','_blank')"><p><i class="fas fa-rocket" style="font-size:30px;"></i><br></br>PPMS</p></div>
+		
+	</div>
+</body>
+
+</html>

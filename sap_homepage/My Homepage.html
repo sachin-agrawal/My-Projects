@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.grid-container {
+  display: grid;
+  grid-column-gap: 30px;
+  grid-row-gap: 20px;
+  grid-template-columns: 28% 28% 28% 28%;
+  width:70%;
+  margin-left: 6%;
+  margin-right: 6%;
+}
+
+@media screen and (max-width: 992px) {
+    .grid-container {
+  grid-template-columns: 60% 60%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .grid-container {
+  grid-template-columns: auto ;
+    }
+}
+
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.95);
+  border: none;
+  border-radius: 1px;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
+  padding: 30px 20px;
+  font-size: 30px;
+  text-align: center;
+  font-family: sans-serif;
+}
+
+.header {
+    text-align:center;
+    background: #3f5161;
+    color: white;
+    font-family: monospace;
+    margin: auto;
+    width:80%;
+    padding: 20px;
+}
+
+{
+text-decoration:none;
+color:#5f5959;
+}
+
+.fas, .far{
+color:#3f5161;
+clear:left;
+clear:right;
+}
+
+
+</style>
+</head>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
+
+<body>
+
+<h1 class="header"><img src="\\dewdfcv102.wdf.global.corp.sap\TSHome$\C5275755\Desktop\SAP_2011_logo.svg" alt="SAP Logo" style="vertical-align:middle;width:64px;border:0;">  TOOLS HOMEPAGE</h1>
+
+<div class="header" style="padding: 7% 20px;margin-top:10px;">
+<div class="grid-container">
+  <div class="grid-item" onClick="location.href='';"><a href="https://pqahec.hana.ondemand.com/HECQA/" target="_blank"><i class="fas fa-clipboard-list"></i><br></br>PQA</a></div>
+  <div class="grid-item" onClick="location.href='';"><a href="https://statushec.hana.ondemand.com/ded/index.jsp" target="_blank"><i class="far fa-edit"></i><br></br>DED</a></div>
+  <div class="grid-item" onClick="location.href='';"><a href="https://spc.ondemand.com" target="_blank"><i class="fas fa-clipboard-check"></i><br></br>SPC</a></div>  
+  <div class="grid-item" onClick="location.href='';"><a href="#" target="_blank"><i class="fas fa-cloud"></i><br></br>CLD</a></div>
+  <div class="grid-item" onClick="location.href='';"><a href="https://spc40-emea.byd.sap.corp/sap/bc/webdynpro/a1sspc/cam_wd_central#" target="_blank"><i class="fas fa-cloud"></i> <i class="fas fa-user-lock"></i><br></br>CAM</a></div>
+  <div class="grid-item" onClick="location.href='';"><a href="https://cmp.wdf.sap.corp/passvault(bD1lbiZjPTAwMQ==)/default.do" target="_blank"><i class="fas fa-lock"></i> <i class="fas fa-key"></i><br></br>PASSVAULT</a></div>
+  <div class="grid-item" onClick="location.href='';"><a href="https://access.sap.com" target="_blank"><i class="fas fa-desktop" target="_blank"></i><br></br>WTS</a></div>
+  <div class="grid-item" onClick="location.href='';"><a href="#"><i class="fas fa-chalkboard-teacher" target="_blank"></i><br></br>MCD</a></div>
+</div>
+</div>
+</body>
+</html>
